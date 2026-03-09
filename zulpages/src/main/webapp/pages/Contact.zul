@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk>
+<style src="/css/About.css"/>
+<include src="/includes/header.zul"/>
+<div sclass="contact-section" style="padding: 80px 20px; background: #f8f9fa;">
+    <vbox sclass="contact-content container-wide" pack="center" align="center" spacing="50px">
+
+        <label value="Get in Touch"
+               sclass="contact-title"
+               style="font-size:3em; font-weight:bold; color:#222"/>
+
+        <label value="Ready to automate your laundry business? Drop us a message, book a demo, or give us a call. We're here to help!"
+               style="font-size:1.3em; max-width:800px; text-align:center; color:#555; line-height:1.6;"/>
+
+        <hbox pack="center" align="stretch" spacing="60px" width="100%" sclass="contact-layout">
+
+            <!-- Left: Contact Form -->
+            <vbox width="50%" spacing="20px" sclass="contact-form"
+                  viewModel="@id('vm') @init('com.yourapp.controller.ContactViewModel')">
+
+                <textbox placeholder="Full Name *"
+                         value="@bind(vm.name)"
+                         constraint="no empty"/>
+
+                <textbox placeholder="Email Address *"
+         type="email"
+         value="@bind(vm.email)"
+         constraint="no empty, /.+@.+\..+/: Please enter a valid email address"/>
+                <textbox placeholder="Phone Number (with WhatsApp if possible)"
+                         type="tel"
+                         value="@bind(vm.phone)"/>
+
+                <textbox placeholder="Your Message / Inquiry..."
+                         multiline="true" rows="6"
+                         value="@bind(vm.message)"
+                         constraint="no empty"/>
+
+                <button label="Send Message"
+                        sclass="btn-primary"
+                        style="font-size: 1.3em; padding: 16px 40px; width: 100%; max-width: 300px; align-self: center;"
+                        onClick="@command('submit')"/>
+            </vbox>
+
+            <!-- Right: Contact Info -->
+            <vbox width="40%" spacing="30px" sclass="contact-info">
+                <vbox spacing="10px">
+                    <label value="Email" style="font-weight: bold; font-size: 1.4em;"/>
+                    <label value="support@swashlaundry.com"
+                           style="font-size: 1.2em; color:#00C853;"/>
+                    <label value="(or hello@swashlaundry.com)" style="color: #777;"/>
+                </vbox>
+
+                <vbox spacing="10px">
+                    <label value="Phone / WhatsApp" style="font-weight: bold; font-size: 1.4em;"/>
+                    <label value="+91 98765 43210" style="font-size: 1.2em; color:#00C853;"/>
+                    <label value="Mon-Sat: 9:30 AM - 7:00 PM IST" style="color:#777;"/>
+                </vbox>
+
+                <vbox spacing="10px">
+                    <label value="Location" style="font-weight: bold; font-size: 1.4em;"/>
+                    <label value="Pune, Maharashtra, India" style="font-size:1.2em;"/>
+                </vbox>
+            </vbox>
+
+        </hbox>
+
+    </vbox>
+</div>
+	
+		</zk>

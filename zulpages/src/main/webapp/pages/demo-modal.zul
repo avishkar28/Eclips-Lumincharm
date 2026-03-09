@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+   <window id="demoModal"
+        title="Book Free Demo"
+        border="normal"
+        width="420px"
+        closable="true"
+        sizable="false"
+        mode="modal"
+        sclass="demo-modal.css"
+        position="center"
+        visible="true"
+        apply="org.zkoss.bind.BindComposer"
+        viewModel="@id('vm') @init('com.yourapp.controller.IndexViewModel')"
+            onClose='Executions.sendRedirect("/index.zul")'>
+
+        <div style="padding: 20px;">
+            <label value="Quick Demo Request" style="font-size: 1.3rem; font-weight: bold; display: block; margin-bottom: 12px;"/>
+
+            <vbox spacing="16px">
+                <textbox id="name" placeholder="Your Name" hflex="1"/>
+                <textbox id="phone" placeholder="Phone / WhatsApp" hflex="1"/>
+                <textbox id="city" placeholder="City" hflex="1"/>
+                
+                <button label="Send Request" sclass="btn-primary" onClick="@command('submitDemo')"/>
+<button label="Cancel"
+        sclass="btn-outline"
+        onClick="self.getParent().getParent().detach();" />
+            </vbox>
+        </div>
+    </window>
+</zk>

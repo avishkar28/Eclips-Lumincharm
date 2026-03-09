@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk xmlns:n="native">
+
+    
+    <style src="/css/swash-base.css" />
+    <style src="/css/swash-layout.css" />
+
+    <!-- Header -->
+    <div sclass="sticky-header">
+        <hbox sclass="container-wide header-content" pack="spread" align="middle">
+            <hbox align="middle" spacing="12px">
+                <image src="/images/logo1.png" width="160px"/>
+                <label value="Swash" sclass="logo-text"/>
+            </hbox>
+
+            <hbox spacing="40px" sclass="nav-menu">
+                <label value="Home" sclass="nav-link" onClick='Executions.sendRedirect("index.zul")'/>
+                <label value="Features" sclass="nav-link" onClick='Executions.sendRedirect("features.zul")'/>
+                <label value="Pricing" sclass="nav-link" onClick='Executions.sendRedirect("pricing.zul")'/>
+                <label value="Contact" sclass="nav-link"/>
+            </hbox>
+
+            <button label="Book Free Demo" sclass="btn-primary" onClick='Executions.sendRedirect("/pages/demo-modal.zul")'/>
+        </hbox>
+    </div>
+
+    <!-- Pricing Hero -->
+    <div sclass="hero hero-gradient" style="min-height: 65vh; padding-top: 100px; padding-bottom: 60px;">
+        <div sclass="hero-overlay"></div>
+
+        <vbox sclass="container-wide" align="center" spacing="32px">
+            <label value="Choose the Perfect Plan for Your Laundry" sclass="hero-title" style="font-size: 3.6rem;"/>
+            <label value="Flexible, transparent pricing tailored to single stores, chains, hotels, hospitals and more"
+                   sclass="hero-subtitle" style="font-size: 1.6rem; max-width: 780px;"/>
+            <label value="No hidden fees • Scale as you grow • Free demo &amp; custom quote in 24 hours"
+                   style="font-size: 1.3rem; color: #e0ffe0; margin-top: 16px;"/>
+        </vbox>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div style="padding: 80px 5%; background: var(--bg-light);">
+        <hbox sclass="container-wide" pack="center" spacing="40px" style="flex-wrap: wrap; gap: 40px;">
+
+            <!-- Starter -->
+            <div sclass="pricing-card">
+                <vbox align="center" spacing="20px">
+                    <label value="Starter" style="font-size: 2rem; font-weight: 700;"/>
+                    <label value="Ideal for single shop owners starting with pickup &amp; delivery"
+                           style="color: var(--text-muted); text-align: center; min-height: 60px;"/>
+                    <div style="font-size: 2.4rem; font-weight: 800; color: var(--primary); margin: 20px 0;">
+                        Get Quote
+                    </div>
+
+                    <vbox spacing="14px" style="width: 100%; text-align: left; padding: 0 20px;">
+                        <label value="✓ 1 Store / 1 User" sclass="feature-item"/>
+                        <label value="✓ Online + Walk-in + WhatsApp Orders" sclass="feature-item"/>
+                        <label value="✓ Rider App with Live Tracking" sclass="feature-item"/>
+                        <label value="✓ Customer WhatsApp Updates &amp; Billing" sclass="feature-item"/>
+                        <label value="✓ Basic Analytics &amp; Reports" sclass="feature-item"/>
+                        <label value="✓ Email &amp; WhatsApp Support" sclass="feature-item-muted"/>
+                    </vbox>
+
+                    <button label="Book Free Demo" sclass="btn-primary" style="margin-top: 32px; width: 100%;" onClick='Executions.sendRedirect("/pages/demo-modal.zul")'/>
+                </vbox>
+            </div>
+
+            <!-- Pro – Most Popular -->
+            <div sclass="pricing-card popular">
+                <div sclass="popular-badge">Most Popular</div>
+                <vbox align="center" spacing="20px">
+                    <label value="Pro" style="font-size: 2rem; font-weight: 700;"/>
+                    <label value="Best for growing multi-store chains &amp; medium operations"
+                           style="color: var(--text-muted); text-align: center; min-height: 60px;"/>
+                    <div style="font-size: 2.4rem; font-weight: 800; color: var(--primary); margin: 20px 0;">
+                        Get Quote
+                    </div>
+
+                    <vbox spacing="14px" style="width: 100%; text-align: left; padding: 0 20px;">
+                        <label value="✓ Up to 10 Stores / Users" sclass="feature-item"/>
+                        <label value="✓ Everything in Starter" sclass="feature-item"/>
+                        <label value="✓ Branded Customer Mobile App" sclass="feature-item"/>
+                        <label value="✓ Advanced Analytics &amp; Insights" sclass="feature-item"/>
+                        <label value="✓ Loss Prevention &amp; Tag Management" sclass="feature-item"/>
+                        <label value="✓ Priority WhatsApp &amp; Phone Support" sclass="feature-item"/>
+                        <label value="✓ Multi-branch Dashboard" sclass="feature-item"/>
+                    </vbox>
+
+                    <button label="Book Free Demo" sclass="btn-primary" style="margin-top: 32px; width: 100%;" onClick='Executions.sendRedirect("/pages/demo-modal.zul")'/>
+                </vbox>
+            </div>
+
+            <!-- Enterprise -->
+            <div sclass="pricing-card">
+                <vbox align="center" spacing="20px">
+                    <label value="Enterprise" style="font-size: 2rem; font-weight: 700;"/>
+                    <label value="Custom solution for hotels, hospitals, large chains &amp; franchises"
+                           style="color: var(--text-muted); text-align: center; min-height: 60px;"/>
+                    <div style="font-size: 2.4rem; font-weight: 800; color: var(--primary); margin: 20px 0;">
+                        Custom Pricing
+                    </div>
+
+                    <vbox spacing="14px" style="width: 100%; text-align: left; padding: 0 20px;">
+                        <label value="✓ Unlimited Stores / Users" sclass="feature-item"/>
+                        <label value="✓ Everything in Pro" sclass="feature-item"/>
+                        <label value="✓ Custom Branding &amp; White-label App" sclass="feature-item"/>
+                        <label value="✓ API Integrations (Razorpay, etc.)" sclass="feature-item"/>
+                        <label value="✓ Dedicated Account Manager" sclass="feature-item"/>
+                        <label value="✓ On-premise / Private Cloud Option" sclass="feature-item"/>
+                        <label value="✓ 24/7 Priority Support &amp; SLA" sclass="feature-item"/>
+                    </vbox>
+
+                    <button label="Contact for Custom Quote" sclass="btn-primary" style="margin-top: 32px; width: 100%;"/>
+                </vbox>
+            </div>
+        </hbox>
+    </div>
+
+ <!-- Real-Time Charts Section -->
+<div style="padding: 60px 5%; background: #ffffff;">
+    <vbox sclass="container-wide" align="center" spacing="40px">
+        <label value="Live Business Metrics (Demo)"
+               style="font-size: 2.2rem; font-weight: bold; color: #222;"/>
+
+        <!-- Input + Button -->
+        <hbox spacing="15px" align="middle">
+            <textbox id="valueInput" placeholder="Enter value (e.g. 150)"
+                     constraint="no negative, no empty"
+                     style="width: 220px; height: 45px; font-size: 1.1em;"/>
+
+            <button id="addBtn" label="Add Value" sclass="btn-primary"
+                    style="padding: 12px 35px; font-size: 1.1em;"/>
+        </hbox>
+
+        <!-- Charts – using n:div to force native HTML output -->
+        <vbox align="center" spacing="40px" width="100%">
+            <n:div style="width: 80%; max-width: 900px; height: 420px; border: 2px dashed #ccc; background: #f8f9fa;">
+                <n:div id="lineChart" style="width: 100%; height: 100%;">
+                    LINE CHART SHOULD BE HERE
+                </n:div>
+            </n:div>
+
+            <n:div style="width: 80%; max-width: 900px; height: 420px; border: 2px dashed #ccc; background: #f8f9fa;">
+                <n:div id="pieChart" style="width: 100%; height: 100%;">
+                    PIE CHART SHOULD BE HERE
+                </n:div>
+            </n:div>
+        </vbox>
+
+        <!-- Debug -->
+        <label value="DEBUG: If you see this + 'LINE CHART SHOULD BE HERE' text below, divs are rendered"
+               style="color: red; font-size: 1.8rem; font-weight: bold; text-align: center; margin: 30px 0;" />
+
+        <script defer="true">
+            console.log("Debug check after render:");
+            console.log("lineChart element:", document.getElementById('lineChart'));
+            console.log("pieChart element:", document.getElementById('pieChart'));
+        </script>
+    </vbox>
+</div>
+    <!-- Final CTA -->
+    <div sclass="final-cta cta-gradient">
+        <vbox sclass="cta-content container-wide" align="center" spacing="40px">
+            <label value="Ready to Choose Your Plan?" sclass="cta-title"/>
+            <label value="Book a free personalized demo — we’ll show you exactly how Swash fits your business"
+                   sclass="cta-subtitle"/>
+            <button label="Book Free Demo Now" sclass="btn-white" onClick='Executions.sendRedirect("/pages/demo-modal.zul")'/>
+        </vbox>
+    </div><!-- Scripts LAST – this is very important -->
+<script src="/js/apexcharts.min.js"></script>
+<script src="/js/apexcharts-logic.js" defer="true"></script>
+
+
+
+    <!-- ApexCharts real-time logic -->
+    <script defer="true"><![CDATA[
+    zk.afterMount(function () {
+        console.log("ZK ready - ApexCharts initializing");
+
+        const lineDiv = document.getElementById('lineChart');
+        const pieDiv  = document.getElementById('pieChart');
+
+        if (!lineDiv || !pieDiv) {
+            console.error("Chart containers missing - check div IDs");
+            return;
+        }
+
+        window.chartValues = [120, 180, 95, 220];
+
+        window.lineChart = new ApexCharts(lineDiv, {
+            series: [{
+                name: 'Value Trend',
+                data: window.chartValues
+            }],
+            chart: {
+                type: 'line',
+                height: 380,
+                animations: { enabled: true, easing: 'easeinout', speed: 800 }
+            },
+            stroke: { curve: 'smooth', width: 2, colors: ['#4CAF50'] },
+            xaxis: {
+                categories: window.chartValues.map((_, i) => `Entry ${i + 1}`),
+                title: { text: 'Entry Number' }
+            },
+            yaxis: { title: { text: 'Value' } },
+            title: { text: 'Value Trend Over Time', align: 'left' }
+        });
+        window.lineChart.render();
+
+        window.pieChart = new ApexCharts(pieDiv, {
+            series: [615, 0],
+            chart: {
+                type: 'pie',
+                height: 380,
+                animations: { enabled: true, easing: 'easeinout', speed: 800 }
+            },
+            labels: ['Previous Entries', 'Latest Entry'],
+            colors: ['#2196F3', '#FF9800'],
+            title: { text: 'Value Distribution', align: 'left' },
+            legend: { position: 'bottom' }
+        });
+        window.pieChart.render();
+
+        console.log("ApexCharts ready");
+
+        var btn = zk.Widget.$('$addBtn');
+        if (btn) {
+            btn.listen({
+                onClick: function () {
+                    console.log("Add Value clicked");
+                    addValue();
+                }
+            });
+            console.log("Button listener attached");
+        } else {
+            console.error("Button $addBtn not found");
+        }
+    });
+
+    function addValue() {
+        const widget = zk.Widget.$('$valueInput');
+        if (!widget) {
+            console.error("valueInput not found");
+            alert("Input field missing");
+            return;
+        }
+
+        const val = widget.getValue().trim();
+        if (!val || isNaN(val) || Number(val) <= 0) {
+            alert("Please enter a positive number");
+            return;
+        }
+
+        const value = parseFloat(val);
+
+        window.chartValues.push(value);
+
+        window.lineChart.updateSeries([{ data: window.chartValues }]);
+        window.lineChart.updateOptions({
+            xaxis: { categories: window.chartValues.map((_, i) => `Entry ${i + 1}`) }
+        });
+
+        const prevSum = window.chartValues.slice(0, -1).reduce((a, b) => a + b, 0);
+        window.pieChart.updateSeries([prevSum, value]);
+
+        widget.setValue('');
+
+        console.log("Charts updated - new value: " + value);
+    }
+]]></script>
+<!-- ... Final CTA ... -->
+
+
+</zk>

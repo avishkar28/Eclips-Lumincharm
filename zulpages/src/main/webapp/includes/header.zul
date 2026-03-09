@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml">
+
+	    <style src="/css/header.css" />
+	
+   <div sclass="sticky-header">
+   <hbox sclass="container-wide header-content" pack="center" align="middle">
+   <!-- Logo + brand -->
+   <hbox align="middle" spacing="12px">
+   <label value="Swash" sclass="logo-text"/>
+   
+   </hbox>
+   
+   
+<hbox spacing="40px" sclass="nav-menu">   
+   <label value = "home" sclass="nav-link" onClick='Executions.sendRedirect("/index.zul")' />
+   <label value = "Features" sclass="nav-link" onClick='Executions.sendRedirect("/pages/features.zul")'/>
+   <label value = "Pricing" sclass="nav-link" onClick='Executions.sendRedirect("/pages/price.zul")'/>
+   <label value = "Contact" sclass="nav-link" onClick='Executions.sendRedirect("/pages/Contact.zul")' />
+   
+   
+   </hbox>
+   
+   <button label ="Book Free Demo" sclass="btn-primary" onClick='Executions.sendRedirect("/pages/demo-modal.zul")'/>
+   
+   </hbox></div>
+</zk>

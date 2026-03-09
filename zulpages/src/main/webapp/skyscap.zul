@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk>
+<window title="WMS Inventory Grid" border="normal" width="100%" height="100%" vflex="1">  <!-- Parent container fills screen -->
+    <grid id="wmsGrid" sizedByContent="true" span="true" vflex="1" hflex="1">  <!-- Grid fills parent, spans columns -->
+        <columns sizable="true">  <!-- Allow user resizing if needed -->
+            <column label="Item ID" hflex="min" />  <!-- Min width to fit content, no expansion -->
+            <column label="Description" hflex="1" />  <!-- Expands to fill remaining space -->
+            <column label="Quantity" hflex="min" />
+            <column label="Location" hflex="1" />
+        </columns>
+        <rows>
+            <!-- Dynamically populate rows via Java or MVVM, e.g., <row><label value="Item data" /></row> -->
+        </rows>
+    </grid>
+</window>
+	
+		</zk>

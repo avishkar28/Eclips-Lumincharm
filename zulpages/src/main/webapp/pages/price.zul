@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+    <style src="/css/swash-base.css" />
+    <style src="/css/swash-layout.css" />
+
+    <!-- Header -->
+   <style src="/css/header.css" />
+	    <include src="/includes/header.zul"/>
+
+    <!-- Hero Section -->
+    <div sclass="hero hero-gradient">
+			<vbox>
+				<hbox>
+				<div sclass=" price-header">
+			<vbox sclass="container-header" spacing="80px" >
+			<div sclass="feature-detail-card">
+                               <vbox>                
+						  <image src="/images/f1.png" width="320px"/>
+                   
+                           </vbox>
+                </div>
+			
+					</vbox >
+					
+				</div>
+			 <label value="WhatsApp Integration" sclass="feature-detail-title"/>
+                    <label value="Customers order, track, pay, and get updates directly via WhatsApp. No extra app needed. Auto invoices and status messages."
+                           sclass="feature-desc"/>
+					</hbox>
+				</vbox>
+				
+				<!-- 1 -->
+					<vbox>
+				<hbox>
+				<div sclass=" price-header">
+			<vbox sclass="container-header" spacing="80px" >
+			<div sclass="feature-detail-card">
+                               <vbox>                
+                   <label value="WhatsApp Integration" sclass="feature-detail-title"/>
+                    <label value="Customers order, track, pay, and get updates directly via WhatsApp. No extra app needed. Auto invoices and status messages."
+                           sclass="feature-desc"/>
+                           </vbox>
+                </div>
+			
+					</vbox >
+					
+				</div>
+			 						  <image src="/images/f1.png" width="320px"/>
+			 
+					</hbox>
+				</vbox>
+								<!-- 2 -->
+				
+				<vbox>
+				<hbox>
+				<div sclass=" price-header">
+			<vbox sclass="container-header" spacing="80px" >
+			<div sclass="feature-detail-card">
+                               <vbox>                
+						  <image src="/images/f1.png" width="320px"/>
+                   
+                           </vbox>
+                </div>
+			
+					</vbox >
+					
+				</div>
+			 <label value="WhatsApp Integration" sclass="feature-detail-title"/>
+                    <label value="Customers order, track, pay, and get updates directly via WhatsApp. No extra app needed. Auto invoices and status messages."
+                           sclass="feature-desc"/>
+					</hbox>
+				</vbox>
+					<!-- 1 -->
+					<vbox>
+				<hbox>
+				<div sclass=" price-header">
+			<vbox sclass="container-header" spacing="80px" >
+			<div sclass="feature-detail-card">
+                               <vbox>                
+                   <label value="WhatsApp Integration" sclass="feature-detail-title"/>
+                    <label value="Customers order, track, pay, and get updates directly via WhatsApp. No extra app needed. Auto invoices and status messages."
+                           sclass="feature-desc"/>
+                           </vbox>
+                </div>
+			
+					</vbox >
+					
+				</div>
+			 						  <image src="/images/f1.png" width="320px"/>
+			 
+					</hbox>
+				</vbox>
+				
+				<vbox>
+				<hbox>
+				<div sclass=" price-header">
+			<vbox sclass="container-header" spacing="80px" >
+			<div sclass="feature-detail-card">
+                               <vbox>                
+						  <image src="/images/f1.png" width="320px"/>
+                   
+                           </vbox>
+                </div>
+			
+					</vbox >
+					
+				</div>
+			 <label value="WhatsApp Integration" sclass="feature-detail-title"/>
+                    <label value="Customers order, track, pay, and get updates directly via WhatsApp. No extra app needed. Auto invoices and status messages."
+                           sclass="feature-desc"/>
+					</hbox>
+				</vbox>
+					<!-- 1 -->
+					<vbox>
+				<hbox>
+				<div sclass=" price-header">
+			<vbox sclass="container-header" spacing="80px" >
+			<div sclass="feature-detail-card">
+                               <vbox>                
+                   <label value="WhatsApp Integration" sclass="feature-detail-title"/>
+                    <label value="Customers order, track, pay, and get updates directly via WhatsApp. No extra app needed. Auto invoices and status messages."
+                           sclass="feature-desc"/>
+                           </vbox>
+                </div>
+			
+					</vbox >
+					
+				</div>
+			 						  <image src="/images/f1.png" width="320px"/>
+			 
+					</hbox>
+				</vbox><vbox>
+				<hbox>
+				<div sclass=" price-header">
+			<vbox sclass="container-header" spacing="80px" >
+			<div sclass="feature-detail-card">
+                               <vbox>                
+						  <image src="/images/f1.png" width="320px"/>
+                   
+                           </vbox>
+                </div>
+			
+					</vbox >
+					
+				</div>
+			 <label value="WhatsApp Integration" sclass="feature-detail-title"/>
+                    <label value="Customers order, track, pay, and get updates directly via WhatsApp. No extra app needed. Auto invoices and status messages."
+                           sclass="feature-desc"/>
+					</hbox>
+				</vbox>
+					<!-- 1 -->
+					<vbox>
+				<hbox>
+				<div sclass=" price-header">
+			<vbox sclass="container-header" spacing="80px" >
+			<div sclass="feature-detail-card">
+                               <vbox>                
+                   <label value="WhatsApp Integration" sclass="feature-detail-title"/>
+                    <label value="Customers order, track, pay, and get updates directly via WhatsApp. No extra app needed. Auto invoices and status messages."
+                           sclass="feature-desc"/>
+                           </vbox>
+                </div>
+			
+					</vbox >
+					
+				</div>
+			 						  <image src="/images/f1.png" width="320px"/>
+			 
+					</hbox>
+				</vbox>
+				
+            </div>
+
+    <!-- Final CTA -->
+    <div sclass="final-cta cta-gradient">
+        <vbox sclass="cta-content container-wide" align="center" spacing="40px">
+            <label value="Ready to Experience These Features?" sclass="cta-title"/>
+            <label value="Book a free demo — we'll show you exactly how Swash works for your business size and type"
+                   sclass="cta-subtitle"/>
+            <button label="Schedule Free Demo Now" sclass="btn-white" onClick="@command('bookDemo')"/>
+        </vbox>
+    </div>
+</zk>

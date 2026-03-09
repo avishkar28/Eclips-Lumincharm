@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk xmlns:n="native">
+
+    <!-- Load ApexCharts -->
+    <script src="/js/apexcharts.min.js"></script>
+
+    <style src="/css/swash-base.css" />
+    <style src="/css/swash-layout.css" />
+
+    <!-- Header (optional – keep if you want, or remove) -->
+    <div sclass="sticky-header">
+        <hbox sclass="container-wide header-content" pack="spread" align="middle">
+            <hbox align="middle" spacing="12px">
+                <image src="/images/logo1.png" width="160px"/>
+                <label value="Swash" sclass="logo-text"/>
+            </hbox>
+            <hbox spacing="40px" sclass="nav-menu">
+                <label value="Home" sclass="nav-link" onClick='Executions.sendRedirect("index.zul")'/>
+                <label value="Features" sclass="nav-link" onClick='Executions.sendRedirect("features.zul")'/>
+                <label value="Pricing" sclass="nav-link" onClick='Executions.sendRedirect("pricing.zul")'/>
+                <label value="Contact" sclass="nav-link"/>
+            </hbox>
+            <button label="Book Free Demo" sclass="btn-primary" onClick='Executions.sendRedirect("/pages/demo-modal.zul")'/>
+        </hbox>
+    </div>
+
+<!-- Main Charts Page – compact 2x2 grid (all four visible) -->
+    <div style="padding: 36px 3%; background: #ffffff; min-height: 100vh;">
+        <vbox sclass="container-wide" align="center" spacing="20px">
+
+            <label value="Business Insights Dashboard"
+                   style="font-size: 1.8rem; font-weight: 700; color: #1e293b; margin-bottom: 8px;"/>
+
+            <!-- Grid: exactly 2 columns on desktop, 1 column on narrow screens. Card height is reduced so all 4 fit in one window. -->
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; width: 100%; max-width:1200px; margin:0 auto;">
+
+                <!-- Card 1: Pie Chart -->
+                <div style="background:white; padding:12px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); height:340px; display:flex; flex-direction:column;">
+                    <label value="Sales by Category" style="font-size:1rem; font-weight:600; color:#334155; margin-bottom:8px;"/>
+                    <n:div id="pieChartContainer" style="flex:1; width:100%; height:100%;"></n:div>
+                </div>
+
+                <!-- Card 2: Column Chart -->
+                <div style="background:white; padding:12px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); height:340px; display:flex; flex-direction:column;">
+                    <label value="Monthly Revenue" style="font-size:1rem; font-weight:600; color:#334155; margin-bottom:8px;"/>
+                    <n:div id="columnChartContainer" style="flex:1; width:100%; height:100%;"></n:div>
+                </div>
+
+                <!-- Card 3: Line Chart -->
+                <div style="background:white; padding:12px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); height:340px; display:flex; flex-direction:column;">
+                    <label value="User Growth" style="font-size:1rem; font-weight:600; color:#334155; margin-bottom:8px;"/>
+                    <n:div id="lineChartContainer" style="flex:1; width:100%; height:100%;"></n:div>
+                </div>
+
+                <!-- Card 4: Onion Diagram (3 concentric donuts) -->
+                <div style="background:white; padding:12px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); height:340px; display:flex; flex-direction:column; position:relative; overflow:hidden;">
+                    <label value="Customer Sentiment (Onion)" style="font-size:1rem; font-weight:600; color:#334155; margin-bottom:8px;"/>
+
+                    <!-- Onion wrapper: three concentric divs that will host three donut charts; sizes chosen so all three visible as rings -->
+                    <div id="onionWrapper" style="flex:1; width:100%; height:100%; position:relative; display:flex; align-items:center; justify-content:center;">
+                        <n:div id="onionOuter" style="position:absolute; inset:0; width:100%; height:100%;"></n:div>
+                        <n:div id="onionMid" style="position:absolute; width:72%; height:72%; top:14%; left:14%;"></n:div>
+                        <n:div id="onionInner" style="position:absolute; width:46%; height:46%; top:27%; left:27%;"></n:div>
+                    </div>
+                </div>
+
+            </div>
+
+        </vbox>
+    </div>
+
+    <!-- JavaScript – initialize pie, column, line, and onion (3-layer donuts); store instances for resize -->
+    <script defer="true"><![CDATA[
+        (function () {
+            const charts = [];
+
+            function initAllCharts() {
+                if (typeof ApexCharts === 'undefined') {
+                    console.error('ApexCharts is not loaded.');
+                    return;
+                }
+
+                // Console log for debugging
+                console.log('initAllCharts: rendering pie, column, line, onion (3 layers)');
+
+                // small helper to render and push
+                function renderChart(container, options) {
+                    try {
+                        const c = new ApexCharts(container, options);
+                        c.render();
+                        charts.push(c);
+                        return c;
+                    } catch (e) {
+                        console.error('Chart render failed for', container, e);
+                        return null;
+                    }
+                }
+
+                // PIE (card 1)
+                const pieEl = document.getElementById('pieChartContainer');
+                if (pieEl) {
+                    renderChart(pieEl, {
+                        series: [28, 22, 18, 16, 16],
+                        chart: { type: 'pie', height: '100%', width: '100%' },
+                        labels: ['Pickup', 'Dry Clean', 'Iron', 'Premium', 'Others'],
+                        colors: ['#6366f1', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6'],
+                        legend: { position: 'bottom', horizontalAlign: 'center' },
+                        title: { text: null },
+                        dataLabels: { enabled: false }
+                    });
+                }
+
+                // COLUMN (card 2)
+                const colEl = document.getElementById('columnChartContainer');
+                if (colEl) {
+                    renderChart(colEl, {
+                        series: [{ name: 'Revenue', data: [42000, 52000, 48000, 61000, 70000, 76000, 82000] }],
+                        chart: { type: 'bar', height: '100%', width: '100%' },
+                        plotOptions: { bar: { horizontal: false, columnWidth: '50%', endingShape: 'rounded' } },
+                        xaxis: { categories: ['Jan','Feb','Mar','Apr','May','Jun','Jul'] },
+                        yaxis: { title: { text: '₹' } },
+                        colors: ['#6366f1'],
+                        legend: { show: false },
+                        dataLabels: { enabled: false }
+                    });
+                }
+
+                // LINE (card 3)
+                const lineEl = document.getElementById('lineChartContainer');
+                if (lineEl) {
+                    renderChart(lineEl, {
+                        series: [{ name: 'Users', data: [100,160,220,300,360,420,500] }],
+                        chart: { type: 'line', height: '100%', width: '100%' },
+                        stroke: { curve: 'smooth', width: 2.5 },
+                        markers: { size: 3 },
+                        xaxis: { categories: ['Jan','Feb','Mar','Apr','May','Jun','Jul'] },
+                        colors: ['#10b981'],
+                        legend: { show: false },
+                        dataLabels: { enabled: false }
+                    });
+                }
+
+                // ONION (card 4) – three concentric donut charts
+                const outerEl = document.getElementById('onionOuter');
+                const midEl = document.getElementById('onionMid');
+                const innerEl = document.getElementById('onionInner');
+
+                if (outerEl && midEl && innerEl) {
+                    // Outer ring (largest)
+                    renderChart(outerEl, {
+                        series: [50,30,20],
+                        chart: { type: 'donut', height: '100%', width: '100%' },
+                        plotOptions: { pie: { donut: { size: '40%' } } },
+                        labels: ['Promoters','Passives','Detractors'],
+                        colors: ['#10b981','#f59e0b','#ef4444'],
+                        legend: { show: false },
+                        dataLabels: { enabled: false }
+                    });
+
+                    // Middle ring
+                    renderChart(midEl, {
+                        series: [70,30],
+                        chart: { type: 'donut', height: '100%', width: '100%' },
+                        plotOptions: { pie: { donut: { size: '35%' } } },
+                        labels: ['Positive','Negative'],
+                        colors: ['#06b6d4','#f97316'],
+                        legend: { show: false },
+                        dataLabels: { enabled: false }
+                    });
+
+                    // Inner ring (smallest)
+                    renderChart(innerEl, {
+                        series: [85,15],
+                        chart: { type: 'donut', height: '100%', width: '100%' },
+                        plotOptions: { pie: { donut: { size: '30%' } } },
+                        labels: ['Satisfied','Unsatisfied'],
+                        colors: ['#8b5cf6','#ef4444'],
+                        legend: { show: false },
+                        dataLabels: { enabled: true, formatter: function (val, opts) { return opts.w.globals.labels[opts.seriesIndex] + ': ' + val.toFixed(0) + '%'; } }
+                    });
+                }
+
+                // Resize handler: call ApexCharts's redraw/resize if present
+                let resizeTimer = null;
+                function onResize() {
+                    if (resizeTimer) clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(() => {
+                        charts.forEach(c => { try { if (c && typeof c.resize === 'function') c.resize(); if (c && typeof c.render === 'function') { /* no-op */ } } catch (e) {} });
+                    }, 150);
+                }
+                window.addEventListener('resize', onResize);
+
+                console.log('Charts rendered (compact grid + onion)');
+            }
+
+            if (window.zk && zk.afterMount) zk.afterMount(initAllCharts);
+            else setTimeout(initAllCharts, 600);
+        })();
+    ]]></script>
+
+</zk>

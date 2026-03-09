@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<zk>
+	
+    <!-- Header -->
+    <style src="/css/About.css" />
+	    <include src="/includes/header.zul"/>
+		<!-- About Section  -->
+		
+		
+		
+			
+	
+		
+		
+			
+		<!-- About Section -->
+<div sclass="about-section" style="padding: 60px 20px; background: #f8f9fa;">
+    <vbox sclass="About-content container-wide" pack="center" align="center" spacing="35px">
+
+        <label value="About us" sclass="about-title" 
+               style="font-size: 2.8em; font-weight: bold; margin-bottom:10px;"/>
+
+        <label value="We create software that makes your daily laundry operations easy and effortless..." 
+               sclass="about-subtitle"
+               style="font-size: 1.4em; max-width: 740px; text-align: center;"/>
+
+        <label value="Swash Laundry Software is designed to automate every step of the laundry process — from order intake to delivery."
+               style="max-width: 760px; text-align: center; line-height: 1.7; font-size: 1.1em; color: #555;"/>
+
+        <separator bar="true" spacing="40px"/>
+
+        <label value="What sets Swash apart?"
+               style="font-size: 1.8em; font-weight: bold; color:#222;"/>
+
+        <label value="We provide an intuitive home screen followed by clear service options (e.g., Wash &amp; Clean, Clean &amp; Dry, and many more). Unlike other laundry software, our biggest strength is the truly friendly and user-friendly interface that makes daily operations enjoyable and straightforward for your team."
+               style="max-width: 760px; text-align: center; line-height: 1.6; font-size: 1.1em; color: #555;"/>
+
+    </vbox>
+</div>
+
+<!-- Final CTA – now properly outside -->
+<div sclass="final-cta cta-gradient" style="padding: 80px 20px;">
+    <vbox sclass="cta-content container-wide" align="center" spacing="40px">
+        <label value="Ready to Experience These Features?" 
+               sclass="cta-title" 
+               style="font-size: 2.2em;"/>
+        <label value="Book a free demo — we'll show you exactly how Swash works for your business size and type."
+               sclass="cta-subtitle" 
+               style="font-size: 1.3em; max-width: 700px; text-align: center;"/>
+        <button label="Schedule Free Demo Now" 
+                sclass="btn-white" 
+                onClick='Executions.sendRedirect("/pages/demo-modal.zul")' 
+                style="font-size: 1.2em; padding: 14px 32px;"/>
+    </vbox>
+</div>
+
+
+</zk>

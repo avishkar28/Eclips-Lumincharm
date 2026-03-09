@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+    <style src="/css/About.css"/>  <!-- Reuse your CSS for consistency -->
+    <include src="/includes/header.zul"/>  <!-- Your header -->
+
+    <div sclass="charts-section" style="padding: 60px 20px; background: #f8f9fa;">
+        <vbox sclass="charts-content container-wide" pack="center" align="center" spacing="40px">
+            <label value="Real-Time Charts Dashboard" 
+                   style="font-size: 2.5em; font-weight: bold; color: #222;"/>
+
+            <label value="Enter a new value to update the charts in real-time:"
+                   style="font-size: 1.2em; color: #555;"/>
+
+            <!-- Input and Update Button -->
+            <hbox spacing="10px">
+                <textbox placeholder="Enter value (e.g., 50)" 
+                         value="@bind(vm.newValue)"
+                         style="width: 200px; height: 40px; font-size: 1.1em;"/>
+                <button label="Update Charts" 
+                        sclass="btn-primary" 
+                        onClick="@command('updateCharts')"
+                        style="padding: 10px 30px; font-size: 1.1em;"/>
+            </hbox>
+
+            <!-- Two-column layout for charts -->
+            <hbox pack="center" align="stretch" spacing="40px" width="100%">
+                <!-- Left: Line Graph -->
+                <vbox width="50%" spacing="20px">
+                    <label value="Line Graph (Real-Time Values)" 
+                           style="font-weight: bold; font-size: 1.5em;"/>
+                    <chart type="line" 
+                           model="@load(vm.lineModel)"
+                           width="100%" height="400px"
+                           title="Value Trends"
+                           xLabel="Time/Index" yLabel="Value"/>
+                </vbox>
+
+                <!-- Right: Pie Chart -->
+                <vbox width="50%" spacing="20px">
+                    <label value="Pie Chart (Proportions)" 
+                           style="font-weight: bold; font-size: 1.5em;"/>
+                    <chart type="pie" 
+                           model="@load(vm.pieModel)"
+                           width="100%" height="400px"
+                           title="Value Distribution"/>
+                </vbox>
+            </hbox>
+        </vbox>
+    </div>
+
+    <!-- Optional Footer -->
+    <div sclass="footer" style="background: #333; color: white; padding: 20px; text-align: center;">
+        <label value="© 2026 Meta4 Laundry Software. All rights reserved."/>
+    </div>
+</zk>

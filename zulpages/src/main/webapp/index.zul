@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+
+    <style src="/css/Home.css" />
+	    <style src="/css/header.css" />
+	    <include src="/includes/header.zul"/>
+	
+    <window id="mainWindow"
+        
+            border="none"
+            width="100%"
+            sclass="main-window">
+    
+        <!-- Hero Section -->
+        <div sclass="hero-banner">
+            <vbox align="center" pack="center" spacing="20px">
+                <label value="Run Your Laundry Business Like a Pro"
+                       sclass="hero-title"/>
+                <label value="Smart Order Management &amp; Pickup / Delivery &amp; Rider App &amp; Customer App &amp; WhatsApp Billing &amp; Analytics"
+                       sclass="hero-subtitle"/>
+                <hbox spacing="20px">
+                    <button label="Book Free Demo"
+                            sclass="btn-primary"
+                            onClick='Executions.sendRedirect("/pages/demo-modal.zul")'/>
+                    <button label="Watch 2-min Video"
+                            sclass="btn-outline"
+                            onClick='Executions.sendRedirect("https://youtu.be/kKwNkgq58dY?si=sDaxiLv5M1AbGwZA")'/>
+                </hbox>
+            </vbox>
+        </div>
+
+        <!-- Trust Bar -->
+        <div sclass="trust-bar">
+            <hbox align="center" pack="center" spacing="60px">
+                <vbox>
+                    <label value="500+" sclass="trust-number"/>
+                    <label value="Laundries Trust Swash" sclass="trust-text"/>
+                </vbox>
+                <vbox>
+                    <label value="10 Lakh+" sclass="trust-number"/>
+                    <label value="Garments Processed" sclass="trust-text"/>
+                </vbox>
+                <vbox>
+                    <label value="Since 2018" sclass="trust-number"/>
+                    <label value="Trusted &amp; Growing" sclass="trust-text"/>
+                </vbox>
+            </hbox>
+        </div>
+
+        <!-- Features -->
+        <div sclass="features-section">
+            <label value="Powerful Features for Modern Laundries"
+                   sclass="section-title"/>
+
+            <grid sclass="feature-grid">
+                <columns>
+                    <column hflex="1"/>
+                    <column hflex="1"/>
+                    <column hflex="1"/>
+                </columns>
+                <rows>
+                    <row>
+                        <cell>
+                            <div sclass="feature-card">
+                                <image src="/images/whatsapp.png" width="64px"/>
+                                <label value="WhatsApp Magic" sclass="feature-title"/>
+                                <label value="Auto invoices, pickup requests &amp; updates — no extra app needed"
+                                       sclass="feature-desc"/>
+                            </div>
+                        </cell>
+
+                        <cell>
+                            <div sclass="feature-card">
+                                <image src="/images/rider.png" width="64px"/>
+                                <label value="Rider + Live Tracking" sclass="feature-title"/>
+                                <label value="Real-time delivery status for owners &amp; customers"
+                                       sclass="feature-desc"/>
+                            </div>
+                        </cell>
+
+                        <cell>
+                            <div sclass="feature-card">
+                                <image src="/images/Analytics.png" width="64px"/>
+                                <label value="Smart Analytics" sclass="feature-title"/>
+                                <label value="Revenue, losses, repeat customers — grow with data"
+                                       sclass="feature-desc"/>
+                            </div>
+                        </cell>
+                    </row>
+                </rows>
+            </grid>
+        </div>
+
+        <!-- Final CTA -->
+        <div sclass="final-cta">
+            <vbox align="center" spacing="30px">
+                <label value="Ready to Automate &amp; Grow Your Laundry?"
+                       sclass="cta-title"/>
+                <label value="Join 500+ laundries already using Swash — start your free demo today"
+                       sclass="cta-subtitle"/>
+                <button label="Schedule Free Demo Now"
+                        sclass="btn-white"
+                        onClick='Executions.sendRedirect("/pages/demo-modal.zul")'/>
+            </vbox>
+        </div>
+
+    </window>
+</zk>

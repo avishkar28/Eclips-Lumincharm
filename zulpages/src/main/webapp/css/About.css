@@ -1,0 +1,149 @@
+/* About.css - Clean, Fresh, Modern Laundry Software Theme */
+
+/* General Reset & Container */
+.container-wide {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* About Section */
+.about-section {
+    background: #f8f9fa;          /* Very light gray - clean & airy */
+    padding: 80px 0;              /* More generous vertical padding */
+    min-height: 60vh;
+}
+
+.about-title {
+    font-size: 3.2rem;            /* Slightly larger for impact */
+    font-weight: 800;
+    color: #1a1a1a;               /* Almost black for strong heading */
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.about-subtitle {
+    font-size: 1.45rem;
+    color: #444;
+    line-height: 1.6;
+    max-width: 760px;
+    margin: 0 auto 25px;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Feature/Highlight heading */
+.about-section label[style*="font-size: 1.8em"] {
+    font-size: 2.1rem !important;
+    font-weight: 700;
+    color: #00C853;               /* Green accent for "What sets us apart" */
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+/* Paragraph text in about */
+.About-content label {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #555;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Separator */
+.separator {
+    border-color: #e0e0e0;
+    margin: 40px auto;
+    max-width: 100px;
+}
+
+/* Final CTA Section */
+.final-cta.cta-gradient {
+    background: linear-gradient(135deg, #00C853 0%, #00a03e 100%); /* Fresh green gradient */
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional subtle overlay for depth */
+.final-cta.cta-gradient::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.05); /* very light overlay */
+    z-index: 1;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: white;
+    letter-spacing: -0.8px;
+}
+
+.cta-subtitle {
+    font-size: 1.35rem;
+    max-width: 720px;
+    margin: 0 auto 35px;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+}
+
+/* Button Styles (matching your global .btn-white) */
+.btn-white {
+    background: white;
+    color: #00C853;
+    border: none;
+    border-radius: 50px;
+    padding: 18px 48px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 200, 83, 0.25);
+}
+
+.btn-white:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 200, 83, 0.35);
+    background: #f8fff8; /* very light green tint */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2.6rem;
+    }
+    .about-subtitle {
+        font-size: 1.25rem;
+    }
+    .cta-title {
+        font-size: 2.3rem;
+    }
+    .cta-subtitle {
+        font-size: 1.2rem;
+    }
+    .btn-white {
+        padding: 16px 40px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section,
+    .final-cta {
+        padding: 60px 0;
+    }
+}

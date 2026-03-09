@@ -1,0 +1,133 @@
+/* Main Window */
+.main-window {
+    min-height: 100vh;
+    background: #f9fafb;
+}
+
+/* Hero Banner */
+.hero-banner {
+    height: 80vh;
+    color: white;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('/images/hero-laundry.png');
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+}
+
+/* Trust Section */
+.trust-bar {
+    background: #ffffff;
+    padding: 40px 10%;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.trust-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00C853;
+}
+
+.trust-text {
+    font-size: 1.1rem;
+    color: #4b5563;
+}
+
+/* Features */
+.features-section {
+    padding: 80px 10%;
+    background: white;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 20px;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-title {
+    font-size: 1.4rem;
+    display: block;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.feature-desc {
+    color: #4b5563;
+}
+
+/* Final CTA */
+.final-cta {
+    background: #00C853;
+    color: white;
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.cta-subtitle {
+    font-size: 1.4rem;
+    max-width: 700px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #00C853;
+    color: white;
+    border-radius: 50px;
+    padding: 16px 40px;
+    font-size: 20px;
+    border: none;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 50px;
+    padding: 16px 40px;
+    font-size: 20px;
+}
+
+.btn-white {
+    background: white;
+    color: #00C853;
+    border-radius: 50px;
+    padding: 20px 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+}

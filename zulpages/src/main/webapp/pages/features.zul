@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+    <style src="/css/swash-base.css" />
+    <style src="/css/swash-layout.css" />
+
+    <!-- Header -->
+    <style src="/css/header.css" />
+	    <include src="/includes/header.zul"/>
+
+    <!-- Hero Section -->
+    <div sclass="hero hero-gradient">
+        <div sclass="hero-overlay"></div>
+
+        <vbox sclass="container-wide" align="center" spacing="32px">
+            <label value="Powerful Features for Modern Laundries" sclass="hero-title"/>
+            <label value="Everything you need to manage orders, deliveries, billing, and growth — all in one simple platform"
+                   sclass="hero-subtitle"/>
+        </vbox>
+    </div>
+
+    <!-- Features Grid -->
+    <div sclass="features-section">
+        <vbox sclass="container-wide" spacing="80px">
+            <!-- First row of features -->
+            <hbox spacing="40px" style="flex-wrap: wrap; justify-content: center;">
+                               
+                <div sclass="feature-detail-card">
+                               <vbox>                
+						  <image src="/images/f1.png" width="320px"/>
+                    <label value="WhatsApp Integration" sclass="feature-detail-title"/>
+                    <label value="Customers order, track, pay, and get updates directly via WhatsApp. No extra app needed. Auto invoices and status messages."
+                           sclass="feature-desc"/>
+                           </vbox>
+                </div>	
+
+                <div sclass="feature-detail-card">
+                <vbox>                
+						  <image src="/images/f1.png" width="320px"/>
+                    <label value="Rider App with Live Tracking" sclass="feature-detail-title"/>
+                    <label value="Riders get real-time tasks and routes. Customers and owners see live location updates. Reduce delays and improve delivery trust."
+                           sclass="feature-desc"/> 
+                           </vbox>
+                </div>
+
+                <div sclass="feature-detail-card">
+                <vbox>                
+						  <image src="/images/f1.png" width="320px"/>
+                    <label value="Branded Customer Mobile App" sclass="feature-detail-title"/>
+                    <label value="Your own branded app (Android &amp;iOS) for customers to book, track orders, reorder, and pay. Boosts repeat business."
+                           sclass="feature-desc"/>
+                           </vbox>
+                </div>
+            </hbox>
+
+            <!-- Second row of features -->
+            <hbox spacing="40px" style="flex-wrap: wrap; justify-content: center;">
+                <div sclass="feature-detail-card">
+                <vbox>                
+						  <image src="/images/f1.png" width="320px"/>
+                    <label value="Smart Analytics &amp; Reports" sclass="feature-detail-title"/>
+                    <label value="Real insights: revenue by service, top customers, peak times, lost garments, repeat rate. Data that helps you grow."
+                           sclass="feature-desc"/>
+                           </vbox>
+                </div>
+
+                <div sclass="feature-detail-card">
+                <vbox>                
+						  <image src="/images/f1.png" width="320px"/>
+                    <label value="Tag Printing &amp; Loss Prevention" sclass="feature-detail-title"/>
+                    <label value="Instant barcode/QR tags. Track every garment end-to-end. Find misplaced items fast and reduce losses dramatically."
+                           sclass="feature-desc"/>
+                           </vbox>
+                </div>
+
+                <div sclass="feature-detail-card">
+                <vbox>                
+						  <image src="/images/f1.png" width="320px"/>
+                    <label value="Multi-Store Dashboard" sclass="feature-detail-title"/>
+                    <label value="Manage all branches from one screen. Centralized orders, billing, inventory, staff — perfect for chains and growing businesses."
+                           sclass="feature-desc"/>
+                           </vbox>
+                </div>
+            </hbox>
+        </vbox>
+    </div>
+
+    <!-- Final CTA -->
+    <div sclass="final-cta cta-gradient">
+        <vbox sclass="cta-content container-wide" align="center" spacing="40px">
+            <label value="Ready to Experience These Features?" sclass="cta-title"/>
+            <label value="Book a free demo — we'll show you exactly how Swash works for your business size and type"
+                   sclass="cta-subtitle"/>
+            <button label="Schedule Free Demo Now" sclass="btn-white" onClick="@command('bookDemo')"/>
+        </vbox>
+    </div>
+</zk>
